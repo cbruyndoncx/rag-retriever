@@ -21,6 +21,16 @@ This helps prevent hallucinations and ensures your AI assistant follows your tea
 ### Core Requirements
 
 - Python 3.10-3.12 (Download from [python.org](https://python.org))
+> *💡 Windows Note**: On Windows you can install python 3.10 from the Microsoft Store. Mind the version number selected. The latest version is Pyton 3.13 which is incompatible with this project, find version 3.10 as this version is widely used for other projects as well.
+> ```
+> - find the correct python version "Python 3.10"  in the Microsoft Store and click the blue download/install button.
+> - installation starts and when done, button changes to "installed" and becomes "grey"
+> ```
+- verify your python installation, it should be any Python 3.10 - 3.12 version; if not in this range, install the correct version.
+  > *💡 Windows Note**: On Windows you use the terminal application and start a powershell session. You end up with a cli prompt in your user home directory. Asof 18-jan-2025 Windows default Python installed from the store is for v3.10 is v3.10.11
+  ```shell
+  python --version
+  ```
 - pipx (Install with one of these commands):
 
   ```bash
@@ -30,6 +40,10 @@ This helps prevent hallucinations and ensures your AI assistant follows your tea
   # On Windows/Linux
   python -m pip install --user pipx
   ```
+> *💡 Windows Note**: On Windows it installs v23.0.1 you are prompted to install latest version v24.3.1; go ahead and do this as it is best practice to keep up with pip versions. Since you use hte old version to install the upgrade, you stil get the warning, if you run it again you see it has been upgraded to the latest version.
+> ```shell
+> python.exe -m pip install --upgrade pip
+> ```
 
 ### Optional Dependencies
 
