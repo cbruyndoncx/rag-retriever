@@ -200,6 +200,10 @@ This creates:
 - A configuration file at `~/.config/rag-retriever/config.yaml` (Unix/Mac) or `%APPDATA%\rag-retriever\config.yaml` (Windows)
 - A `.env` file in the same directory for your OpenAI API key
 
+> Windows note: there is no .env file created, add your openai api key to the config.yaml file instead
+> Also the path to the rag-retriever in my case is
+> \AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\Roaming\rag-retriever
+
 ### Setting up your API Key
 
 Add your OpenAI API key to the `.env` file:
