@@ -59,6 +59,11 @@ Required only for:
 
 **MacOS**: `brew install tesseract`
 **Windows**: Install [Tesseract](https://github.com/UB-Mannheim/tesseract/wiki)
+> Windows Note: get the currently used version download and launch installer. Choose all users or just this account. Accepting all defaults
+> ```powershell
+> wget https://github.com/tesseract-ocr/tesseract/releases/download/5.5.0/tesseract-ocr-w64-setup-5.5.0.20241111.exe -o tesseract-setup.exe
+> .\tesseract-setup.exe
+> ```
 
 #### Advanced PDF Processing (Optional)
 
@@ -70,6 +75,23 @@ Required only for:
 
 **MacOS**: `brew install poppler`
 **Windows**: Install [Poppler](https://github.com/oschwartz10612/poppler-windows/releases/)
+> Windows Note: download and opens unzip window, extral all to e.g. your user directory
+> ```powershell
+> wget https://github.com/oschwartz10612/poppler-windows/releases/download/v24.08.0-0/Release-24.08.0-0.zip -o poppler-release.zip
+> .\poppler-release.zip
+> ```
+> Add the bin/ directory from the extracted Poppler package to your system's PATH environment variable. You need to run Powershell as an Administrator for this (rightclick on powershell option in terminal application to launch a new shell)
+> This assumes you installed under your user profile, you can adjust path if needed.
+> ```powershell
+>   $userProfile = [System.Environment]::GetFolderPath('UserProfile')
+>   $popplerPath = "$userProfile\poppler-24.08.0\Library\bin"
+>   $env:Path += ";$popplerPath"
+>   [System.Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::Machine)
+> ```
+> executing the command pdftoppm -h. If Poppler is correctly installed and configured, this command should display help information related to the pdftoppm utility.
+> ```shell
+> pdftoppm -h
+> ```
 
 The core functionality works without these dependencies, including:
 
