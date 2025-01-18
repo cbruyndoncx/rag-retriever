@@ -59,7 +59,33 @@ I am however able to get the installation going using, it has been updating sing
 ```powershell
 python3 -m pipx install rag-retriever
 ```
+output:
+```
+PS C:\Users\bruyn> python3 -m pipx install rag-retriever
+⣽ installing rag-retriever  installed package rag-retriever 0.1.6, installed using Python 3.10.11
+  These apps are now globally available
+    - post-install.exe
+    - rag-retriever.exe
+⚠️  Note: 'C:\Users\bruyn\.local\bin' is not on your PATH environment variable. These apps will not be globally accessible until your PATH is updated. Run `pipx
+    ensurepath` to automatically add it, or manually modify your PATH in your shell's config file (e.g. ~/.bashrc).
+done! ✨ 🌟 ✨
+```
+```
+PS C:\Users\bruyn> python3 -m pipx ensurepath
+C:\Users\bruyn\.local\bin has been been added to PATH, but you need to open a new terminal or re-login for this PATH change to take effect. Alternatively, you can source
+    your shell's config file with e.g. 'source ~/.bashrc'.
+C:\Users\bruyn\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts has been been added to PATH, but you
+    need to open a new terminal or re-login for this PATH change to take effect. Alternatively, you can source your shell's config file with e.g. 'source ~/.bashrc'.
 
+You will need to open a new terminal or re-login for the PATH changes to take effect. Alternatively, you can source your shell's config file with e.g. 'source ~/.bashrc'.
+
+Otherwise pipx is ready to go! ✨ 🌟 ✨
+```
+logged out en in - can confirm pipx is working now and paths correctly setup
+```
+PS C:\Users\bruyn> pipx --version
+1.7.1
+```
 ### Optional Dependencies
 
 The following dependencies are only required for specific advanced features:
