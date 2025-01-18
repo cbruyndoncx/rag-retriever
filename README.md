@@ -45,6 +45,21 @@ This helps prevent hallucinations and ensures your AI assistant follows your tea
 > python.exe -m pip install --upgrade pip
 > ```
 
+> Windows add it to path variable, mind the python version, open powershell window with administrator priviledges
+> ```powershell
+>   $userProfile = [System.Environment]::GetFolderPath('UserProfile')
+>   $pipxPath = "$userProfile\AppData\Roaming\Python\Python3.10.11\Scripts"
+>   $env:Path += ";$pipxPath"
+>   [System.Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::Machine)
+> ```
+WARNING: this did not work on my machine; as i can not find the scripts directory
+using `python3 -m pipx list` it says nothing has been installed with pipx ; so it does understand the functionality of pipx and supposedly executed the module
+
+I am however able to get the installation going using, it has been updating single status line installing/upgrading stuff, takes a long time
+```powershell
+python3 -m pipx install rag-retriever
+```
+
 ### Optional Dependencies
 
 The following dependencies are only required for specific advanced features:
